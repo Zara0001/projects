@@ -9,11 +9,11 @@
     </head>
 
     <body>
-        <div class="header">
+        <div class="blok header">
             <img src="image/Polina_image.jpg" alt="Фото автора" height="350" width="350" align="right" class="leftfoto"/>
                 В процессе написания одного веб-приложения возникла необходимость тестировать код на PHP, интенсивно взаимодействующий с БД MySQL. В проекте в качестве фреймворка модульного тестирования использовался порт xUnit — PHPUnit. В результате было принято решение писать тесты для модулей, непосредственно взаимодействующих с базой, подцепив плагин PHPUnit/DbUnit. Дальше я расскажу о тех трудностях, которые возникли при написании тестов и о том, каким способом я их преодолел. В ответ же хотелось бы получить комментарии знающих людей относительно корректности моих решений.
         </div>
-        <div class="razdel">
+        <div class="blok razdel">
             <div>
                 <ul>
                     <li>
@@ -21,15 +21,15 @@
                         <ul>
                             <li>
                                 <img src="image/Albert_Einstein_01.jpeg" alt="фото" height="50" width="50" class="image" align="middle" />
-                                <a href="Albert_Einstein.html">Альберт Эйнштейн</a>
+                                <a href="pages/Albert_Einstein.html">Альберт Эйнштейн</a>
                             </li>
                             <li>
                                 <img src="image/Michael_Faraday_01.jpg" alt="фото" height="50" width="50" class="image" align="middle" />
-                                <a href="Michael_Faraday.html">Майкл Фарадей</a>
+                                <a href="pages/Michael_Faraday.html">Майкл Фарадей</a>
                             </li>
                             <li>
                                 <img src="image/Stephen_Hawking_01.jpg" alt="фото" height="50" width="50" class="image" align="middle" />
-                                <a href="#">Стивен Хокинг</a>
+                                <a href="pages/Stephen_Hawking.html">Стивен Хокинг</a>
                             </li>
                     </li>
                 </ul>
@@ -44,19 +44,19 @@
                                 <ul>
                                     <li>
                                         <img src="image/mechanics.jpg" alt="фото" height="50" width="50" class="image" align="middle"/>
-                                        <a href="mechanics.html">Механика</a>
+                                        <a href="pages/mechanics.html">Механика</a>
+                                    </li>
+                                    <li>
+                                        <img src="image/termodynamics_content_01.png" alt="фото" height="50" width="50" class="image" align="middle"/>
+                                        <a href="pages/thermodynamics.html">Термодинамика</a>
+                                    </li>
+                                    <li>
+                                        <img src="image/optics_content_01.jpg" alt="фото" height="50" width="50" class="image" align="middle"/>
+                                        <a href="pages/optics.html">Оптика</a>
                                     </li>
                                     <li>
                                         <img src="image/#" alt="фото" height="50" width="50" class="image" align="middle"/>
-                                        <a href="#">Термодинамика</a>
-                                    </li>
-                                    <li>
-                                        <img src="image/#" alt="фото" height="50" width="50" class="image" align="middle"/>
-                                        <a href="#">Оптика</a>
-                                    </li>
-                                    <li>
-                                        <img src="image/#" alt="фото" height="50" width="50" class="image" align="middle"/>
-                                        <a href="#">Электродинамика</a>
+                                        <a href="pages/electrodynamics.html">Электродинамика</a>
                                     </li>
                                 </ul>
                             </li>
@@ -65,23 +65,23 @@
                                 <ul>
                                     <li>
                                         <img src="image/#" alt="фото" height="50" width="50" class="image" align="middle"/>
-                                        <a href="#">Ститческая физика</a>
+                                        <a href="pages/static.html">Ститческая физика</a>
                                     </li>
                                     <li>
                                         <img src="image/#" alt="фото" height="50" width="50" class="image" align="middle"/>
-                                        <a href="#">Физика конденсированных сред</a>
+                                        <a href="pages/konds.html">Физика конденсированных сред</a>
                                     </li>
                                     <li>
                                         <img src="image/#" alt="фото" height="50" width="50" class="image" align="middle"/>
-                                        <a href="#">Квантовая физика</a>
+                                        <a href="pages/quantum.html">Квантовая физика</a>
                                     </li>
                                     <li>
                                         <img src="image/#" alt="фото" height="50" width="50" class="image" align="middle"/>
-                                        <a href="#">Ядерная физика</a></a>
+                                        <a href="pages/core.html">Ядерная физика</a></a>
                                     </li>
                                     <li>
                                         <img src="image/#" alt="фото" height="50" width="50" class="image" align="middle"/>
-                                        <a href="#">Физика элементарных частиц</a>
+                                        <a href="pages/elementary.html">Физика элементарных частиц</a>
                                     </li>
                                 </ul>
                             </li>
@@ -89,6 +89,18 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="blok wiki">
+            <a href="https://ru.wikipedia.org"><img src="image/wiki.png" alt="Иконка сайта" height="150" width="150" align="left" class="image"  /></a>
+            Вся информация о людях и разделах физики взята из <a href="https://ru.wikipedia.org">википедии</a>
+        </div>
+        <div class="blok htmlbook">
+            <a href="http://htmlbook.ru"> <img src="image/htmlbook.png" alt="Иконка сайта" height="150" width="150" align="right" class="image" /></a>
+            <a href="http://htmlbook.ru">Сайт</a> при помощи которого я научился писать код на html и css
+        </div>
+        <div class="blok google">
+            <a href="http://google.com"> <img src="image/google.png" alt="Иконка сайта" height="51" width="150" align="left" class="image" /></a>
+            Ну и конечно спасибо <a href="http://google.com">гуглу</a> что помог разобраться со всеми проблемами которые возникали в процессе создания данного сайта
         </div>
     </body>
 

@@ -1,5 +1,6 @@
 body {
     background-image: url(image/background.jpg);
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 .leftfoto {
@@ -9,15 +10,17 @@ body {
     padding: 6px;
 }
 
-.header {
-    position: absolute;
-    right: 20px;
-    width: 55%;
+.blok{
     background-color: #FFF;
-    border: 3px solid #00235E;
+    border: 2px solid #130350;
+    border-radius: 10px;
     padding: 15px;
     margin: 10px;
-    border-radius: 50px;
+}
+
+.header {
+    position: absolute; right: 20px;
+    width: 55%;
 }
 
 .text_scientist {
@@ -32,13 +35,7 @@ body {
 }
 
 .razdel {
-    position: absolute;
-    left: 10;
-    background-color: #FFF;
-    border: 2px solid #130350;
-    border-radius: 2px 15px 15px 2px;
-    padding: 15px;
-    margin: 10px;
+    position: absolute; left: 10px;
 }
 
 .title_scientist {
@@ -58,25 +55,39 @@ body {
 
 .image {
     margin: 5px;
-    border: 1px dotted #000;
+    /* border: 1px solid #000; */
 }
 
 .left {
     padding: : 20px;
-    position: relative;
-    top: 300px;
-    position: relative;
-    left: 12px;
+    position: relative; top: 300px;
+    position: relative; left: 12px;
 }
 
 .right {
     padding: : 20px;
-    position: relative;
-    bottom: 188px;
-    position: relative;
-    left: 700px;
+    position: relative; bottom: 188px;
+    position: relative; left: 700px;
 }
 
 ul {
     list-style-type: square;
+}
+
+.wiki{
+    position: absolute; left: 533px;
+    position: absolute; top: 440px;
+    width: 55%;
+}
+
+.htmlbook{
+    position: absolute; left: 533px;
+    position: absolute; top: 643px;
+    width: 55%
+}
+
+.google{
+    position: absolute; left: 533px;
+    position: absolute; top: 848px;
+    width: 55%;
 }
