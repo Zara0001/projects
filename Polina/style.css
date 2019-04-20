@@ -1,0 +1,71 @@
+body{
+    background-image: url(image/background.jpg);
+}
+
+.leftfoto{
+    float:right;
+    margin: 0px 10px 2px 4px;
+    border:2px solid #EC0D0D;
+    padding:6px;
+}
+
+.header{
+    position: absolute;right: 20px;
+    width: 55%;
+    background-color: #FFF;
+    border: 3px solid #00235E;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 50px;
+}
+.text_scientist{
+    position: absolute;left: 20px;
+    width: 40%;
+    background-color: #FFF;
+    border: 2px solid #00235E;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.razdel{
+    position: absolute;left: 10;
+    background-color: #FFF;
+    border: 2px solid #130350;
+    border-radius: 2px 15px 15px 2px;
+    padding: 15px;
+}
+
+.title_scientist{
+    background-color: #1BC73C;
+    background-size: cover;
+    padding: 5px;
+    border: 1px solid #130350;
+}
+
+.icon{
+    background-color: #0FD112;
+    border: 1px solid #130350;
+    border-radius: 10px;
+}
+
+.image{
+    margin: 5px;
+    border: 1px dotted #000;
+}
+
+.left{
+    padding: : 20px;
+    position: relative;top: 300px;
+    position: relative;left: 12px;
+}
+
+.right{
+    padding: : 20px;
+    position: relative;bottom: 188px;
+    position: relative;left: 700px;
+}
+
+ul{
+    list-style-type: square;
+}
