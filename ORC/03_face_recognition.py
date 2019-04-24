@@ -20,7 +20,7 @@ faceCascade = cv2.CascadeClassifier(cascadePath);
 font = cv2.FONT_HERSHEY_SIMPLEX
 
 #iniciate id counter
-id = 0
+id = 1
 
 # names related to ids: example ==> Marcelo: id=1,  etc
 names = ['art','SUPER']
@@ -53,6 +53,12 @@ while True:
         cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 2)
 
         id, confidence = recognizer.predict(gray[y:y+h,x:x+w])
+        # print(id)
+        # print(confidence)
+        if (confidence > 60):
+            print("NOT")
+        else:
+            print("YES")
 
         # Check if confidence is less them 100 ==> "0" is perfect match
         if (confidence < 60):
