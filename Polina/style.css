@@ -16,6 +16,7 @@ body {
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
+    width: 55%;
 }
 
 .header {
@@ -35,7 +36,9 @@ body {
 }
 
 .razdel {
+    padding: 10px 10px 10px 0px;
     position: absolute; left: 10px;
+    width: 32%;
 }
 
 .title_scientist {
@@ -55,8 +58,8 @@ body {
 
 .image {
     margin: 5px;
-    padding: 10px;
-    border: 1px solid #000;
+    padding: 5px;
+    /* border: 1px solid #000; */
 }
 
 .left {
@@ -92,21 +95,18 @@ ul {
 }
 
 .wiki{
-    position: absolute; left: 533px;
+    position: absolute; left: 606px;
     position: absolute; top: 440px;
-    width: 55%;
 }
 
 .htmlbook{
-    position: absolute; left: 533px;
+    position: absolute; left: 606px;
     position: absolute; top: 683px;
-    width: 55%
 }
 
 .google{
-    position: absolute; left: 533px;
+    position: absolute; left: 606px;
     position: absolute; top: 928px;
-    width: 55%;
 }
 
 /* .text{
