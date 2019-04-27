@@ -36,9 +36,9 @@ body {
 }
 
 .razdel {
-    padding: 10px 10px 10px 0px;
+    padding: 10px;
     position: absolute; left: 10px;
-    width: 32%;
+    width: 35%;
 }
 
 .title_scientist {
@@ -72,12 +72,28 @@ body {
     position: absolute; top: 515px;
 }
 
+.Albert{
+    position: absolute;top: 380px;
+}
+
 .mechanics_01{
     position: absolute; top: 590px;
 }
 
 .thermodynamics_01{
-    position: absolute;top: 380px;
+    position: absolute;top: 400px;
+}
+
+.elementary{
+    position: absolute;top: 480px;
+}
+
+.konds{
+    position: absolute;top: 470px;
+}
+
+.core{
+    position: absolute;top: 350px;
 }
 
 .right {
@@ -95,17 +111,17 @@ ul {
 }
 
 .wiki{
-    position: absolute; left: 606px;
+    position: absolute; left: 535px;
     position: absolute; top: 440px;
 }
 
 .htmlbook{
-    position: absolute; left: 606px;
+    position: absolute; left: 535px;
     position: absolute; top: 683px;
 }
 
 .google{
-    position: absolute; left: 606px;
+    position: absolute; left: 535px;
     position: absolute; top: 928px;
 }
 
@@ -120,3 +136,72 @@ ul {
     position: absolute;top: 150px;
     padding: 10px;
 } */
+
+.marquee{
+    border: 2px solid #F40707;
+    border-radius: 30px;
+}
+
+.button{
+    border: 1px solid #EB0CA9;
+    border-radius: 10px;
+    background-color: #90DAB0;
+    margin: 5px;
+    padding: 5px;
+}
+
+.button_left{
+    position: relative;left: 28px;
+}
+
+.button_right{
+    position: absolute;left: 915px;
+}
+
+.button_height_Michael{
+    position: relative;top: 140px;
+}
+
+.button_height_Hawking{
+    position: relative;top: 210px;
+}
+
+.button_height_Albert{
+    position: relative;top: 0px;
+}
+
+.button_height_core{
+    position: relative;top: 70px;
+}
+
+.button_height_electrodynamics{
+    position: relative;top: 0px;
+}
+
+.button_height_electrostatic{
+    position: relative;top: 60px;
+}
+
+.button_height_elementary{
+    position: relative;top: 0px;
+}
+
+.button_height_konds{
+    position: relative;top: 110px;
+}
+
+.button_height_mechanics{
+    position: relative;top: 0px;
+}
+
+.button_height_optics{
+    position: relative;top: 10px;
+}
+
+.button_height_quantum{
+    position: relative;top: 20px;
+}
+
+.button_height_thermodynamics{
+    position: relative;top: 10px;
+}
