@@ -1,27 +1,32 @@
 import imaplib
-from email import message
 import email
-import getpass
+from email import message
 
-imap = imaplib.IMAP4_SSL('imap.outlook.com') # ЗАХОДИМ НА СЕРВЕР
-# imap.login('a.myasnicova2017@outlook.com', getpass.getpass('Pasword :')) # ЗАХОДИМ НА СВОЮ ПОЧТУ
-imap.login('a.myasnicova2017@outlook.com', 'artem_uaga151201') # ЗАХОДИМ НА СВОЮ ПОЧТУ
+imap = imaplib.IMAP4_SSL('imap.outlook.com')
+imap.login('a.myasnicova2017@outlook.com', 'artem_uaga151201')
 
-imap.list() # СМОТРИМ СПИСОК ДОСТУПНЫХ ПАПОК ("INBOX", "Sent", и т.д.)
-imap.select("check") # ПОДКЛЮЧАЕМСЯ К НУЖНОЙ НАМ ПАПКЕ
-imap.search(None, "ALL") # ПОЛУЧАЕМ СПИСОК ID ЧЕРЕЗ ПРОБЕЛ
+imap.list()
+imap.select('check')
+imap.search(None, "ALL")
 
-status, data = imap.fetch(b'2' , '(RFC822)') # ЗАГРУЖАЕМ НУЖНОЕ НАМ ПИСЬМО
+# imap.fetch(b'1', ('HTML'))
+status, data = imap.fetch(b'1', ('RFC822'))
+
 msg = email.message_from_bytes(data[0][1],
     _class = email.message.EmailMessage)
+        # parser subject
+subject = msg.get('Subject')
 
-b = email.message_from_string(msg[''])
+        # parser body
+if msg.is_multipart():
+    for part in msg.get_payload():
+        if part.get_content_maintype() == 'text' and part.get('Content-Disposition') == None:
+            msg_body = part.get_payload(decode=1)
 
-# print(msg['Subject'])
-f=open('data', 'w')
-# typ, data = imap.fetch(data[0], '(RFC822)')
-f.write('Message %sn%sn' % (status, data[0][1]))
+            f = open('data.txt', 'w')
+            f.write(str(msg_body))
+            # print(msg_body)
+else:
+    msg_body = msg.get_payload()
 
-f.close()
-imap.close()
 imap.logout()
