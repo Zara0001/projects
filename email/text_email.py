@@ -25,7 +25,7 @@ if msg.is_multipart():
 
             # msg_body = (bytes(msg_body).decode('cp1251'))
 
-            f = open('data.txt', 'w')
+            f = open('data.text', 'w')
             f.write(str(msg_body))
             # print(msg_body)
 
