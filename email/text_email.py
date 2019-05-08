@@ -3,11 +3,11 @@ import email
 from email import message
 import getpass
 
-email_servis = {
-    'yandex' : 'imap.yandex.com',
-    'outlook' : 'imap.outlook.com',
-    'gmail' : 'imap.gmail.com'
-}
+# email_servis = {
+#     'yandex' : 'imap.yandex.com',
+#     'outlook' : 'imap.outlook.com',
+#     'gmail' : 'imap.gmail.com'
+# }
 
 email_1 = 'imap.outlook.com'
 
@@ -21,7 +21,7 @@ imap.list()
 imap.select('check')
 imap.search(None, "ALL")
 
-status, data = imap.fetch(b'1', '(RFC822)')
+status, data = imap.fetch(b'7', '(RFC822)')
 # msg = email.message_from_bytes(data[0][1],
 #     _class = email.message.EmailMessage)
 
@@ -36,7 +36,7 @@ if msg.is_multipart():
     #
     #         # msg_body = (bytes(msg_body).decode('cp1251'))
     #
-            f = open('data.html', 'w')
+            # f = open('data.html', 'w')
     #         f.write(str(msg_body))
             # print(msg_body)
 
@@ -46,7 +46,7 @@ if msg.is_multipart():
                 if filename:
                     # Нам плохого не надо, в письме может быть всякое барахло
                     with open(part.get_filename(), 'w') as new_file:
-                        f.write(str(part.get_payload(decode=True), encoding='utf-8'))
-            f.close
+                        new_file.write((str(part.get_payload(decode=True), encoding='utf-8')).lower())
+            # f.close
 
 imap.logout()

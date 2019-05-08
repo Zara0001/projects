@@ -1,15 +1,18 @@
 import re
 
-pattern = re.compile(r'\w+')
+pattern = re.compile(r'<!-- Items -->')
 
 # with open('data.html', 'r') as f:
 
-f = open('data.html', 'rt', encoding='UTF-8')
+f = open('data.html')
 g = open('data_pars.html', 'w')
 
 for line in f:
     peremennaua = re.findall(pattern, line)
-    print(f.read())
+    if peremennaua:
+        print(peremennaua)
+        print(line)
+    # print(peremennaua)
     g.write(str(peremennaua))
 
 f.close
