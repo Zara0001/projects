@@ -1,6 +1,6 @@
 import re
 
-file = '09_05_2019_06_07_27116066400616889666.html'
+file = 'data/09_05_2019_06_07_27116066400616889666.html'
 
 pattern_start_1 = re.compile('<td>1</td>')
 pattern_start_2 = re.compile('<td>2</td>')
@@ -13,10 +13,11 @@ pattern_start_7 = re.compile('<td>7</td>')
 # pattern_eat = re.compile('молоко? хлеб? мороженое батон?')
 pattern_eat = re.compile('[а-я]+')
 pattern_count = re.compile(r'\d{,4}\.\d{,4}')
-pattern_finish = re.compile('<!--  total -->')
+# pattern_finish = re.compile('<!--  total -->')
 
 # f = open('data.html', 'r', 'utf-8')
 f = open(file, 'r')
+g = open('search', 'w')
 
 num_line = 0
 
@@ -56,15 +57,20 @@ for line in f:
                         # print(line)
                         # print(line_content)
                         eat = re.findall(pattern_eat, line_content)
-                        print(str(eat))
+                        eat = ' '.join(eat)
+                        print(eat)
                         print('')
 
                     if line in line_count:
                         # print(line)
                         # print(line_content)
                         count = re.findall(pattern_count, line_content)
+                        count = ' '.join(count)
                         print(count)
                         print('')
+
+                        g.write(eat+'\n')
+                        g.write(count+'\n')
 
                     if line in line_two:
                         a = re.findall(pattern_start_2, line_content)
@@ -84,6 +90,7 @@ for line in f:
                                         # print(line)
                                         # print(line_content)
                                         eat_2 = re.findall(pattern_eat, line_content)
+                                        eat_2 = ' '.join(eat_2)
                                         print(eat_2)
                                         print('')
 
@@ -91,8 +98,12 @@ for line in f:
                                         # print(line)
                                         # print(line_content)
                                         count_2 = re.findall(pattern_count, line_content)
+                                        count_2 = ' '.join(count_2)
                                         print(count_2)
                                         print('')
+
+                                        g.write(eat_2+'\n')
+                                        g.write(count_2+'\n')
 
                                     if line in line_three:
                                         a = re.findall(pattern_start_3, line_content)
@@ -112,6 +123,7 @@ for line in f:
                                                         # print(line)
                                                         # print(line_content)
                                                         eat_3 = re.findall(pattern_eat, line_content)
+                                                        eat_3 = ' '.join(eat_3)
                                                         print(eat_3)
                                                         print('')
 
@@ -119,8 +131,12 @@ for line in f:
                                                         # print(line)
                                                         # print(line_content)
                                                         count_3 = re.findall(pattern_count, line_content)
+                                                        count_3 = ' '.join(count_3)
                                                         print(count_3)
                                                         print('')
+
+                                                        g.write(eat_3 + '\n')
+                                                        g.write(count_3 + '\n')
 
                                                     if line in line_four:
                                                         a = re.findall(pattern_start_4, line_content)
@@ -133,13 +149,14 @@ for line in f:
                                                             line_five_int = i_4+18
                                                             line_five = [line_five_int]
 
-                                                            with open(file) as fp:
-                                                                for line, line_content in enumerate(fp):
+                                                            with open(file) as f_4:
+                                                                for line, line_content in enumerate(f_4):
 
                                                                     if line in line_eat_4:
                                                                         # print(line)
                                                                         # print(line_content)
                                                                         eat_4 = re.findall(pattern_eat, line_content)
+                                                                        eat_4 = ' '.join(eat_4)
                                                                         print(eat_4)
                                                                         print('')
 
@@ -147,8 +164,12 @@ for line in f:
                                                                         # print(line)
                                                                         # print(line_content)
                                                                         count_4 = re.findall(pattern_count, line_content)
+                                                                        count_4 = ' '.join(count_4)
                                                                         print(count_4)
                                                                         print('')
+
+                                                                        g.write(eat_4 + '\n')
+                                                                        g.write(count_4 + '\n')
 
                                                                     if line in line_five:
                                                                         a = re.findall(pattern_start_5, line_content)
@@ -161,13 +182,14 @@ for line in f:
                                                                             line_six_int = i_5+18
                                                                             line_six = [line_six_int]
 
-                                                                            with open(file) as fp:
-                                                                                for line, line_content in enumerate(fp):
+                                                                            with open(file) as f_5:
+                                                                                for line, line_content in enumerate(f_5):
 
                                                                                     if line in line_eat_5:
                                                                                         print(line)
                                                                                         print(line_content)
                                                                                         eat_5 = re.findall(pattern_eat, line_content)
+                                                                                        eat_5 = ' '.join(eat_5)
                                                                                         print(eat_5)
                                                                                         print('')
 
@@ -175,8 +197,12 @@ for line in f:
                                                                                         print(line)
                                                                                         print(line_content)
                                                                                         count_5 = re.findall(pattern_count, line_content)
+                                                                                        count_5 = ' '.join(count_5)
                                                                                         print(count_5)
                                                                                         print('')
+
+                                                                                        g.write(eat_5 + '\n')
+                                                                                        g.write(count_5 + '\n')
 
                                                                                     if line in line_six:
                                                                                         a = re.findall(pattern_start_6, line_content)
@@ -189,13 +215,14 @@ for line in f:
                                                                                             line_seven_int = i_6+18
                                                                                             line_seven = [line_seven_int]
 
-                                                                                            with open(file) as fp:
-                                                                                                for line, line_content in enumerate(fp):
+                                                                                            with open(file) as f_6:
+                                                                                                for line, line_content in enumerate(f_6):
 
                                                                                                     if line in line_eat_6:
                                                                                                         print(line)
                                                                                                         print(line_content)
                                                                                                         eat_6 = re.findall(pattern_eat, line_content)
+                                                                                                        eat_6 = ' '.join(eat_6)
                                                                                                         print(eat_6)
                                                                                                         print('')
 
@@ -203,8 +230,12 @@ for line in f:
                                                                                                         print(line)
                                                                                                         print(line_content)
                                                                                                         count_6 = re.findall(pattern_count, line_content)
+                                                                                                        count_6 = ' '.join(count_6)
                                                                                                         print(count_6)
                                                                                                         print('')
+
+                                                                                                        g.write(eat_6 + '\n')
+                                                                                                        g.write(count_6 + '\n')
 
                                                                                                     if line in line_seven:
                                                                                                         a = re.findall(pattern_start_7, line_content)
@@ -217,13 +248,14 @@ for line in f:
                                                                                                             line_eight_int = i_7+18
                                                                                                             line_eight = [line_eight_int]
 
-                                                                                                            with open(file) as fp:
-                                                                                                                for line, line_content in enumerate(fp):
+                                                                                                            with open(file) as f_7:
+                                                                                                                for line, line_content in enumerate(f_7):
 
                                                                                                                     if line in line_eat_7:
                                                                                                                         print(line)
                                                                                                                         print(line_content)
                                                                                                                         eat_7 = re.findall(pattern_eat, line_content)
+                                                                                                                        eat_7 = ' '.join(eat_7)
                                                                                                                         print(eat_7)
                                                                                                                         print('')
 
@@ -231,5 +263,9 @@ for line in f:
                                                                                                                         print(line)
                                                                                                                         print(line_content)
                                                                                                                         count_7 = re.findall(pattern_count, line_content)
+                                                                                                                        count_7 = ' '.join(count_7)
                                                                                                                         print(count_7)
                                                                                                                         print('')
+
+                                                                                                                        g.write(eat_7 + '\n')
+                                                                                                                        g.write(count_7 + '\n')
