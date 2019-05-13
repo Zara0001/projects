@@ -15,11 +15,21 @@ pattern_eat = re.compile('[а-я]+')
 pattern_count = re.compile(r'\d{,4}\.\d{,4}')
 # pattern_finish = re.compile('<!--  total -->')
 
+pattern_date = re.compile('d{2}.d{2}.d{4} d{2}:d{2}')
+
 # f = open('data.html', 'r', 'utf-8')
 f = open(file, 'r')
 g = open('search', 'w')
 
 num_line = 0
+
+with open(___file___) as a:
+a = a.readlines(a)
+date = re.findall(pattern_date, a)
+if date:
+print(date)
+#___tab___for line, line_content in enumerate(a):
+#___tab______tab___
 
 for line in f:
 
