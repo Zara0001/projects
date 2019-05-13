@@ -15,13 +15,26 @@ pattern_eat = re.compile('[а-я]+')
 pattern_count = re.compile(r'\d{,4}\.\d{,4}')
 # pattern_finish = re.compile('<!--  total -->')
 
+pattern_date = re.compile(r'\d{2}.\d{2}.\d{4} \d{2}:\d{2}')
+
 # f = open('data.html', 'r', 'utf-8')
 f = open(file, 'r')
 g = open('search', 'w')
 
 num_line = 0
 
+#___tab___for line, line_content in enumerate(a):
+#___tab______tab___
+
 for line in f:
+
+    with open(file) as a:
+        date = re.findall(pattern_date, line)
+        if date:
+            date = ' '.join(date)
+            print(date)
+            print(' ')
+            g.write(date + '\n')
 
     num_line += 1
     overlap_one = re.findall(pattern_start_1, line)
