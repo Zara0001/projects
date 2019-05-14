@@ -1,4 +1,9 @@
 <html>
-    <p>Hi there!</p>
+{% for product in products %}
+            {{product}}<br>
+            {{product.count}}<br>
+            {{product.date}}<br>
+{% endfor %}
+
     <p>It works!</p>
 </html>
