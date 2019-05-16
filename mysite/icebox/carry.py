@@ -1,9 +1,21 @@
-from .models import Product
-
-f = open('../email/search')
-line = f.readlines()
-str = line[0:len(line)]
-str = [line.rstrip('\n') for line in str]
-
-Product.objects.create(name=str[1], count=str[2], date=str[0])
-# Сделать цикл для name and count и как-то обработать дату из DD.MM.YYYY HH:MM в YYYY.MM.DD HH:MM:SS
+import time
+from icebox.models import Product
+def carry(file):
+    f = open(file)
+    line = f.readlines()
+    f.close
+    str = line[0:len(line)]
+    str = [line.rstrip('\n') for line in str]
+    lens = int((len(line))/2)
+    lens_i = lens*2
+    print(lens)
+    str_name = 1
+    str_count = 2
+    str_date = 0
+    i=0
+    for i in range(lens):
+        Product.objects.create(name=str[str_name], count=str[str_count], date=str[str_date])
+        if str_count<lens_i:
+            str_name += 2
+            str_count += 2
+            time.sleep(1)
